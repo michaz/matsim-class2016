@@ -6,8 +6,8 @@
 	<artifactId>matsim-example-project</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
-	<name>MATSim example project</name>
-	<description>MATSim example project</description>
+	<name>MATSim 2016 class</name>
+	<description>MATSim 2016 class</description>
 
 	<repositories>
 		<repository>
