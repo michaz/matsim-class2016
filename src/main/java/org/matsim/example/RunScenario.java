@@ -25,23 +25,20 @@ import org.matsim.core.controler.Controler;
 import org.matsim.core.controler.OutputDirectoryHierarchy.OverwriteFileSetting;
 import org.matsim.core.scenario.ScenarioUtils;
 
-/**
- * @author nagel
- *
- */
-public class HelloWorld {
+
+public class RunScenario {
 // a comment
 
 	public static void main(String[] args) {
 		
-		// This creates a default matsim config:
-		Config config = ConfigUtils.createConfig();
+		// This loads a default matsim config:
+		Config config = ConfigUtils.loadConfig("config.xml");
 		
-		config.controler().setLastIteration(1);
+		//Relative path locations must be relative to the project folder (both in the config and here)
 		config.controler().setOverwriteFileSetting( OverwriteFileSetting.deleteDirectoryIfExists );
-
-		// This creates a default matsim scenario (which is empty):
-		Scenario scenario = ScenarioUtils.createScenario(config) ;
+		
+		// This loads the scenario
+		Scenario scenario = ScenarioUtils.loadScenario(config) ;
 
 		Controler controler = new Controler( scenario ) ;
 
