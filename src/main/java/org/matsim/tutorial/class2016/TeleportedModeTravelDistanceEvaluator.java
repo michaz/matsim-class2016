@@ -24,19 +24,19 @@ public class TeleportedModeTravelDistanceEvaluator implements PersonDepartureEve
 	}
 
 	@Override
-	public void handleEvent(PersonArrivalEvent arg0) {
+	public void handleEvent(PersonArrivalEvent event) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void handleEvent(PersonDepartureEvent arg0) {
+	public void handleEvent(PersonDepartureEvent event) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void reset(int arg0) {
+	public void reset(int event) {
 		// TODO Auto-generated method stub
 		// for post-processing events, this method can be ignored.
 	}

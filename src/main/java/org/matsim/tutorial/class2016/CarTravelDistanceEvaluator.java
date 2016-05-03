@@ -26,32 +26,32 @@ public class CarTravelDistanceEvaluator implements PersonDepartureEventHandler, 
 	}
 
 	@Override
-	public void handleEvent(LinkLeaveEvent arg0) {
+	public void handleEvent(LinkLeaveEvent event) {
 
 		// TODO Auto-generated method stub
 
 	}
 
 	@Override
-	public void handleEvent(LinkEnterEvent arg0) {
+	public void handleEvent(LinkEnterEvent event) {
 		// TODO Auto-generated method stub
 
 	}
 
 	@Override
-	public void handleEvent(PersonArrivalEvent arg0) {
+	public void handleEvent(PersonArrivalEvent event) {
 		// TODO Auto-generated method stub
 
 	}
 
 	@Override
-	public void handleEvent(PersonDepartureEvent arg0) {
+	public void handleEvent(PersonDepartureEvent event) {
 		// TODO Auto-generated method stub
 
 	}
 
 	@Override
-	public void reset(int arg0) {
+	public void reset(int event) {
 		// for post-processing events, this method can be ignored.
 	}
 

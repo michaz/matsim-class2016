@@ -34,6 +34,8 @@ public class RunScenario {
 		// This loads a default matsim config:
 		Config config = ConfigUtils.loadConfig("config.xml");
 		
+		config.controler().setLastIteration(50);
+		
 		//Relative path locations must be relative to the project folder (both in the config and here)
 		config.controler().setOverwriteFileSetting( OverwriteFileSetting.deleteDirectoryIfExists );
 		
@@ -41,8 +43,6 @@ public class RunScenario {
 		Scenario scenario = ScenarioUtils.loadScenario(config) ;
 
 		Controler controler = new Controler( scenario ) ;
-
-		// This indeed runs iterations, but based on an empty scenario:
 		controler.run();
 
 	}
