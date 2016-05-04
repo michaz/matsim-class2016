@@ -57,6 +57,8 @@ public class PostprocessEvents {
 				bw.newLine();
 				bw.write(i + ";" + distanceClasses[i]);
 			}
+			bw.flush();
+			bw.close();
 
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
