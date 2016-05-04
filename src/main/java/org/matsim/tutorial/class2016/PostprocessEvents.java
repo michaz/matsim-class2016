@@ -23,7 +23,8 @@ public class PostprocessEvents {
 		Network network = NetworkUtils.createNetwork();
 		new MatsimNetworkReader(network).readFile(networkFile);
 		EventsManager events = EventsUtils.createEventsManager();
-
+		
+		
 		Config config = ConfigUtils.createConfig();
 		double beelineFactorBike = config.plansCalcRoute().getBeelineDistanceFactors().get(TransportMode.bike);
 		System.out.println(beelineFactorBike);
