@@ -36,6 +36,9 @@ public class PostprocessEvents {
 		TeleportedModeTravelDistanceEvaluator walkDistanceEvaluator = new TeleportedModeTravelDistanceEvaluator(
 				TransportMode.walk, beelineFactorWalk, network);
 
+		CarTravelDistanceEvaluator carTravelDistanceEvaluator = new CarTravelDistanceEvaluator(network);
+		
+		events.addHandler(carTravelDistanceEvaluator);
 		events.addHandler(bikeDistanceEvaluator);
 		events.addHandler(walkDistanceEvaluator);
 
@@ -43,6 +46,7 @@ public class PostprocessEvents {
 
 		writeHistogramData(outputFolder+"bikedistances.csv", bikeDistanceEvaluator.getDistanceClasses());
 		writeHistogramData(outputFolder+"walkdistances.csv", walkDistanceEvaluator.getDistanceClasses());
+		writeHistogramData(outputFolder+"cardistances.csv", carTravelDistanceEvaluator.getDistanceClasses());
 	}
 	
 	
