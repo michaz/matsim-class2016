@@ -1,4 +1,4 @@
-package org.matsim.tutorial.class2016;
+package org.matsim.tutorial.class2016.postProcessing;
 
 import java.util.HashMap;
 import java.util.Map;
