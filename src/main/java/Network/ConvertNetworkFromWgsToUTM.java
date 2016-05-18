@@ -35,16 +35,16 @@ import org.matsim.core.utils.geometry.transformations.TransformationFactory;
  * @author jbischoff
  *
  */
-public class ConvertNetworkToWgs {
+public class ConvertNetworkFromWgsToUTM {
 
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
 		
-		String input = "C:/Users/Joschka/Desktop/network.xml";
-		String output = "C:/Users/Joschka/Desktop/networkWGS.xml";
-		
+		String input = "C:/Users/Joschka/Desktop/networkWGs.xml";
+		String output = "C:/Users/Joschka/Desktop/network.xml";
+			
 		/* Read the network. */
 		Scenario scenario = ScenarioUtils.createScenario(ConfigUtils.createConfig());
 		new MatsimNetworkReader(scenario.getNetwork()).parse(input);
