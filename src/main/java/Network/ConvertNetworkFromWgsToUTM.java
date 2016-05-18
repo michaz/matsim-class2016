@@ -50,7 +50,7 @@ public class ConvertNetworkFromWgsToUTM {
 		new MatsimNetworkReader(scenario.getNetwork()).parse(input);
 		
 		/* Transform each node. */
-		CoordinateTransformation ct = TransformationFactory.getCoordinateTransformation("EPSG:25833",TransformationFactory.WGS84);
+		CoordinateTransformation ct = TransformationFactory.getCoordinateTransformation(TransformationFactory.WGS84,"EPSG:25833");
 
 		for(Node node : scenario.getNetwork().getNodes().values()){
 			((NodeImpl)node).setCoord(ct.transform(node.getCoord()));
