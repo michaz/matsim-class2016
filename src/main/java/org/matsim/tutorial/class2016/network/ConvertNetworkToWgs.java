@@ -18,7 +18,7 @@
  *                                                                         *
  * *********************************************************************** */
 
-package Network;
+package org.matsim.tutorial.class2016.network;
 
 import org.matsim.api.core.v01.Scenario;
 import org.matsim.api.core.v01.network.Node;
@@ -35,22 +35,22 @@ import org.matsim.core.utils.geometry.transformations.TransformationFactory;
  * @author jbischoff
  *
  */
-public class ConvertNetworkFromWgsToUTM {
+public class ConvertNetworkToWgs {
 
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
 		
-		String input = "C:/Users/Joschka/Desktop/networkWGs.xml";
-		String output = "C:/Users/Joschka/Desktop/network.xml";
-			
+		String input = "C:/Users/Joschka/Desktop/network.xml";
+		String output = "C:/Users/Joschka/Desktop/networkWGS.xml";
+		
 		/* Read the network. */
 		Scenario scenario = ScenarioUtils.createScenario(ConfigUtils.createConfig());
 		new MatsimNetworkReader(scenario.getNetwork()).parse(input);
 		
 		/* Transform each node. */
-		CoordinateTransformation ct = TransformationFactory.getCoordinateTransformation(TransformationFactory.WGS84,"EPSG:25833");
+		CoordinateTransformation ct = TransformationFactory.getCoordinateTransformation("EPSG:25833",TransformationFactory.WGS84);
 
 		for(Node node : scenario.getNetwork().getNodes().values()){
 			((NodeImpl)node).setCoord(ct.transform(node.getCoord()));

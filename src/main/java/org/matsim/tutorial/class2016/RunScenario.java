@@ -16,7 +16,7 @@
  *   See also COPYING, LICENSE and WARRANTY file                           *
  *                                                                         *
  * *********************************************************************** */
-package org.matsim.example;
+package org.matsim.tutorial.class2016;
 
 import org.matsim.api.core.v01.Scenario;
 import org.matsim.core.config.Config;
@@ -32,9 +32,9 @@ public class RunScenario {
 	public static void main(String[] args) {
 		
 		// This loads a default matsim config:
-		Config config = ConfigUtils.loadConfig("config.xml");
+		Config config = ConfigUtils.loadConfig("cottbus-with-pt/config01.xml");
 		
-		config.controler().setLastIteration(50);
+		config.controler().setLastIteration(10);
 		
 		//Relative path locations must be relative to the project folder (both in the config and here)
 		config.controler().setOverwriteFileSetting( OverwriteFileSetting.deleteDirectoryIfExists );
